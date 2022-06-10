@@ -86,7 +86,7 @@
       "text": "By continuing you agree to our <a href='privacy.html'>Terms of Service</a> and <a href='privacy.html'>Privacy Policy</a>."
     },
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
-    "publishChangesOnly": true,
+    "publishChangesOnly": false,
     "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-K4XW0ESCVJ\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-K4XW0ESCVJ');\n</script>\n<script> document.addEventListener(\"DOMContentLoaded\", function() {\n    var el = $('section[style*=\"font-size:12px\"]');\n    el.remove();\n    });\n</script>"
   },
   "pages": {
