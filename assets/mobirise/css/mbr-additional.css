@@ -5837,6 +5837,27 @@ a {
     padding: 2rem;
   }
 }
+.cid-tzNZZfyZrP {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+@media (max-width: 991px) {
+  .cid-tzNZZfyZrP .image-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+.cid-tzNZZfyZrP .row {
+  flex-direction: row-reverse;
+}
+.cid-tzNZZfyZrP img {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .cid-tzNZZfyZrP .text-wrapper {
+    padding: 2rem;
+  }
+}
 .cid-tzNoqvQKqh {
   padding-top: 2rem;
   padding-bottom: 1rem;
