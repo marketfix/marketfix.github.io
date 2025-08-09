@@ -1,20 +1,26 @@
 
 :root {
-    --primary: #0A4D8C; /* deep blue like the SpendLess logo */
-    --secondary: #F5F8FB; /* very light blue background */
-    --accent: #2DA8D8; /* brighter blue for highlights */
-    --text-primary: #051923; /* dark navy for text */
-    --text-secondary: #516A7E; /* muted blue grey for secondary text */
-    --card-bg: #FFFFFF; /* card backgrounds */
-    --border-radius: 12px;
+    /*
+     * Colours derived from the current SpendLess subreddit.  The primary and accent tones are
+     * pulled from the `primary_color` (\#a7fdd0) and `key_color` (\#0dd3bb) fields in the
+     * subreddit's JSON metadata【260796839424766†L8-L36】, yielding a fresh green‑teal palette.  Background and text colours
+     * are chosen to ensure high contrast and readability on both light and dark modes.
+     */
+    --primary: #0dd3bb;
+    --secondary: #f9fffc;
+    --accent: #a7fdd0;
+    --text-primary: #033d31;
+    --text-secondary: #546c6a;
+    --card-bg: #ffffff;
+    --border-radius: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --secondary: #001524;
-        --card-bg: #0A2A42;
-        --text-primary: #E7F5FF;
-        --text-secondary: #89A6C7;
+        --secondary: #021915;
+        --card-bg: #052e27;
+        --text-primary: #e3faf3;
+        --text-secondary: #8ba49c;
     }
 }
 
@@ -29,11 +35,11 @@ body {
 
 header {
     background-color: var(--primary);
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
-    padding: 12px 16px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 header h1 {
@@ -64,6 +70,17 @@ header img.logo {
     margin-bottom: 16px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: transform 0.1s;
+}
+
+/* Grid layout for the article cards on the homepage to enhance the
+   visual appeal and break the monotony of a vertical list.  The grid
+   automatically adjusts the number of columns based on screen width
+   using auto‑fill and a minimum card width, ensuring mobile‑first
+   responsiveness. */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
 }
 
 .card:hover {
@@ -195,14 +212,74 @@ p.summary {
 /* Hero images at the top of article pages */
 .hero-image {
     width: 100%;
-    height: auto;
+    /* Reduce height for a more compact hero presentation on article pages */
+    max-height: 120px;
     border-radius: var(--border-radius);
     margin-bottom: 16px;
     object-fit: cover;
+}
+
+/* Thumbnail images within cards on the homepage */
+.card-thumb {
+    width: 100%;
+    /* Thumbnails on the homepage should use even less vertical space to keep cards compact */
+    max-height: 60px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    margin-bottom: 8px;
 }
 
 .comment-confirmation {
     color: var(--accent);
     margin-top: 8px;
     display: none;
+}
+/* Top navigation bar for the site */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    padding: 8px 16px;
+}
+nav .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer for credibility and additional links */
+footer {
+    margin-top: 32px;
+    padding: 20px 16px;
+    background-color: var(--secondary);
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0f0e8;
+}
+
+/* Coupon hover helper text */
+.coupon-code:hover::after {
+    content: 'Click to reveal';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: var(--border-radius);
+    font-size: 0.65rem;
+    pointer-events: none;
+    z-index: 2;
 }
