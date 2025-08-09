@@ -1,0 +1,208 @@
+
+:root {
+    --primary: #0A4D8C; /* deep blue like the SpendLess logo */
+    --secondary: #F5F8FB; /* very light blue background */
+    --accent: #2DA8D8; /* brighter blue for highlights */
+    --text-primary: #051923; /* dark navy for text */
+    --text-secondary: #516A7E; /* muted blue grey for secondary text */
+    --card-bg: #FFFFFF; /* card backgrounds */
+    --border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --secondary: #001524;
+        --card-bg: #0A2A42;
+        --text-primary: #E7F5FF;
+        --text-secondary: #89A6C7;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+header img.logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.1s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+p.summary {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.coupon-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.coupon-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.coupon-description {
+    flex: 1;
+}
+
+.coupon-code {
+    cursor: pointer;
+    background-color: var(--accent);
+    color: white;
+    padding: 6px 10px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.coupon-code span.blur {
+    filter: blur(4px);
+    user-select: none;
+}
+
+.comment-section {
+    margin-top: 24px;
+}
+
+.comment {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.comment-header .name {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.comment-header .meta {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.comment-form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form input,
+.comment-form textarea {
+    background-color: var(--card-bg);
+    border: 1px solid #ccdbe5;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    margin-bottom: 8px;
+    font-family: inherit;
+}
+
+.comment-form button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.comment-form button:hover {
+    background-color: var(--accent);
+}
+
+/* Hero images at the top of article pages */
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.comment-confirmation {
+    color: var(--accent);
+    margin-top: 8px;
+    display: none;
+}
