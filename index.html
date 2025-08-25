@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        SpendLess home page with refreshed Apple‑inspired design.
+        This version introduces a glassmorphic colour palette, responsive
+        navigation with a burger menu, category filtering, sorting and
+        pagination.  Each article card is annotated with a `data-category`
+        attribute so the JavaScript can filter and paginate them.  To
+        adjust the number of cards per page, change the `itemsPerPage`
+        constant in script.js.
+    -->
+    <title>SpendLess – Deals, Coupons & Promo Codes</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo and brand mark.  The text is styled via CSS to be bolder
+             and slightly larger than before. -->
+        <a href="index.html" class="logo-link" style="display:flex;align-items:center;color:inherit;text-decoration:none;">
+            <img class="logo" src="logo.png" alt="SpendLess logo">
+            <span>SpendLess</span>
+        </a>
+    </header>
+    <nav>
+        <!-- Burger menu for small screens.  Clicking toggles the nav list. -->
+        <button class="burger-menu" aria-label="Toggle navigation">&#9776;</button>
+        <div class="nav-links">
+            <a href="#" data-category="all">Home</a>
+            <a href="#" data-category="fashion">Fashion</a>
+            <a href="#" data-category="eye">Eye&nbsp;Care</a>
+            <a href="#" data-category="travel">Travel</a>
+            <a href="#" data-category="tips">Tips</a>
+        </div>
+        <!-- Sorting controls.  Users can reorder cards alphabetically. -->
+        <div class="sort-control">
+            <label for="sort-select">Sort:</label>
+            <select id="sort-select">
+                <option value="default">Default</option>
+                <option value="az">A–Z</option>
+                <option value="za">Z–A</option>
+            </select>
+        </div>
+    </nav>
+    <div class="container">
+        <section class="intro" style="margin-bottom:24px;">
+            <h2 style="margin-top:0; font-size:1.6rem;">Time to spend less!</h2>
+            <p style="color:var(--text-secondary); font-size:1rem;">Your trusted source for curated promotions, coupon codes and money‑saving tips. We verify every code so you can shop with confidence and keep more cash in your wallet.</p>
+        </section>
+        <section class="articles">
+            <div class="cards-grid">
+                <!-- Each card link has a data-category attribute for filtering. -->
+                <a class="card-link" data-category="fashion" href='articles/shein-summer-codes-2025/index.html'>
+                    <div class='card'>
+                        <!-- Use shared category icon instead of brand‑specific art -->
+                        <img src='assets/fashion.png' alt='Thumbnail for Top 2025 Shein Summer Codes: Save Big on Fashion' class='card-thumb'>
+                        <h2>Top 2025 Shein Summer Codes: Save Big on Fashion</h2>
+                        <p class='summary'>Unlock major savings on Shein’s hottest summer styles with up to 60% off and more.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="fashion" href='articles/shein-clearance-free-shipping/index.html'>
+                    <div class='card'>
+                        <img src='assets/fashion.png' alt='Thumbnail for Latest Shein Clearance & Free Shipping Deals' class='card-thumb'>
+                        <h2>Latest Shein Clearance & Free Shipping Deals</h2>
+                        <p class='summary'>Clear out your cart with steep markdowns and no shipping fees on qualifying orders.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="fashion" href='articles/shein-student-tips-plus-size/index.html'>
+                    <div class='card'>
+                        <img src='assets/fashion.png' alt='Thumbnail for Essential Shein Shopping Tips & Student Discounts' class='card-thumb'>
+                        <h2>Essential Shein Shopping Tips & Student Discounts</h2>
+                        <p class='summary'>Make the most of Shein’s shipping policies, student perks, and inclusive sizing.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="fashion" href='articles/shein-flash-sales/index.html'>
+                    <div class='card'>
+                        <img src='assets/fashion.png' alt='Thumbnail for Shein Flash Sales & Surprise Codes for August 2025' class='card-thumb'>
+                        <h2>Shein Flash Sales & Surprise Codes for August 2025</h2>
+                        <p class='summary'>Keep an eye on time‑sensitive flash promotions with huge percentages off.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-new-customer/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: Exclusive New Customer Deals' class='card-thumb'>
+                        <h2>Feel Good Contacts: Exclusive New Customer Deals</h2>
+                        <p class='summary'>New to Feel Good Contacts? Save more on your first order and enjoy extras.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-general-savings/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: General & Repeat Order Savings' class='card-thumb'>
+                        <h2>Feel Good Contacts: General & Repeat Order Savings</h2>
+                        <p class='summary'>Repeat customers can still enjoy great percentages off their orders.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-student-referral/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: Student & Referral Promotions' class='card-thumb'>
+                        <h2>Feel Good Contacts: Student & Referral Promotions</h2>
+                        <p class='summary'>Students and referrals get extra love with additional discount codes.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-price-match/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: Price Match & Sister Sites' class='card-thumb'>
+                        <h2>Feel Good Contacts: Price Match & Sister Sites</h2>
+                        <p class='summary'>Take advantage of price matching and special codes across sister brands.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/contacts-first-order-sitewide-promos/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for 1800 Contacts: First Order & Sitewide Promos' class='card-thumb'>
+                        <h2>1800 Contacts: First Order & Sitewide Promos</h2>
+                        <p class='summary'>Your first purchase comes with steep savings, and there’s plenty more to follow.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/contacts-limited-time-offers/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for 1800 Contacts: Limited‑Time Offers & Bonus Codes' class='card-thumb'>
+                        <h2>1800 Contacts: Limited‑Time Offers & Bonus Codes</h2>
+                        <p class='summary'>Jump on short‑run discounts before they disappear.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/contacts-student-healthcare/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for 1800 Contacts: Student & Healthcare Worker Discounts' class='card-thumb'>
+                        <h2>1800 Contacts: Student & Healthcare Worker Discounts</h2>
+                        <p class='summary'>Special professions deserve special savings on contact lenses and more.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/contacts-shipping-returns/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for 1800 Contacts: Shipping & Returns Tips' class='card-thumb'>
+                        <h2>1800 Contacts: Shipping & Returns Tips</h2>
+                        <p class='summary'>Save more by taking advantage of shipping thresholds and generous return windows.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-all-inclusive/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia: All‑Inclusive Package Discounts & Travel Hacks' class='card-thumb'>
+                        <h2>Expedia: All‑Inclusive Package Discounts & Travel Hacks</h2>
+                        <p class='summary'>Bundle your bookings and slash costs with hefty coupons and pro tips.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-family-group/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia: Family & Group Travel Specials' class='card-thumb'>
+                        <h2>Expedia: Family & Group Travel Specials</h2>
+                        <p class='summary'>Create lasting memories together and pay less for group bookings.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-eco-friendly/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia: Eco‑Friendly & Sustainable Travel Deals' class='card-thumb'>
+                        <h2>Expedia: Eco‑Friendly & Sustainable Travel Deals</h2>
+                        <p class='summary'>Book with a conscience and save with green travel codes.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-membership-rewards/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia: Membership & Rewards Perks' class='card-thumb'>
+                        <h2>Expedia: Membership & Rewards Perks</h2>
+                        <p class='summary'>Level up your account to unlock exclusive coupons and benefits.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-august-verified/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Verified August Coupon Codes' class='card-thumb'>
+                        <h2>Booking.com: Verified August Coupon Codes</h2>
+                        <p class='summary'>Verified discount codes for August that work on hotels, resorts and more.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-eco-family/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Eco & Family‑Friendly Stays' class='card-thumb'>
+                        <h2>Booking.com: Eco & Family‑Friendly Stays</h2>
+                        <p class='summary'>Plan a greener getaway or a family holiday with special discount codes.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-genius-rewards/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Genius Membership & Loyalty Rewards' class='card-thumb'>
+                        <h2>Booking.com: Genius Membership & Loyalty Rewards</h2>
+                        <p class='summary'>Unlock bigger savings as you climb the Genius programme tiers.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-seasonal-last-minute/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Seasonal & Last‑Minute Deals' class='card-thumb'>
+                        <h2>Booking.com: Seasonal & Last‑Minute Deals</h2>
+                        <p class='summary'>Take advantage of limited‑time promotions for spontaneous getaways.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-mobile-early-bird/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Mobile App & Early Booking Bonuses' class='card-thumb'>
+                        <h2>Booking.com: Mobile App & Early Booking Bonuses</h2>
+                        <p class='summary'>Plan ahead or book on the go to secure extra discounts.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="tips" href='articles/general-travel-tips/index.html'>
+                    <div class='card'>
+                        <img src='assets/tips.png' alt='Thumbnail for General Travel Tips: Combine Coupons & Save' class='card-thumb'>
+                        <h2>General Travel Tips: Combine Coupons & Save</h2>
+                        <p class='summary'>Maximize your savings by stacking offers across multiple merchants.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="fashion" href='articles/shein-student-plus-size/index.html'>
+                    <div class='card'>
+                        <img src='assets/fashion.png' alt='Thumbnail for Shein Student & Plus‑Size Deals' class='card-thumb'>
+                        <h2>Shein Student & Plus‑Size Deals</h2>
+                        <p class='summary'>Inclusive fashion meets student budgets with these special offers.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-starter-pack/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: Starter Pack & Eye Care Tips' class='card-thumb'>
+                        <h2>Feel Good Contacts: Starter Pack & Eye Care Tips</h2>
+                        <p class='summary'>Get your complete eye care kit for less and keep your lenses in top shape.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-flash-deals/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia Flash Deals & Last‑Minute Trips' class='card-thumb'>
+                        <h2>Expedia Flash Deals & Last‑Minute Trips</h2>
+                        <p class='summary'>Spur‑of‑the‑moment getaways just got more affordable with flash codes.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/booking-eco-perks/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Booking.com: Eco Perks & Sustainable Stays' class='card-thumb'>
+                        <h2>Booking.com: Eco Perks & Sustainable Stays</h2>
+                        <p class='summary'>Support green properties and enjoy special perks when you go eco‑friendly.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/contacts-subscription/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for 1800 Contacts: Subscription & Auto‑Delivery Savings' class='card-thumb'>
+                        <h2>1800 Contacts: Subscription & Auto‑Delivery Savings</h2>
+                        <p class='summary'>Stay stocked on lenses without worrying about running out, and save along the way.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="fashion" href='articles/shein-clearance-bogo/index.html'>
+                    <div class='card'>
+                        <img src='assets/fashion.png' alt='Thumbnail for Shein Clearance: Up to 70% Off & BOGO Deals' class='card-thumb'>
+                        <h2>Shein Clearance: Up to 70% Off & BOGO Deals</h2>
+                        <p class='summary'>More clearance events mean deeper discounts and buy‑one‑get‑one promos.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="eye" href='articles/feel-good-social-codes/index.html'>
+                    <div class='card'>
+                        <img src='assets/eye.png' alt='Thumbnail for Feel Good Contacts: Exclusive Facebook & Social Codes' class='card-thumb'>
+                        <h2>Feel Good Contacts: Exclusive Facebook & Social Codes</h2>
+                        <p class='summary'>Follow social channels for occasional one‑off discounts you can’t get elsewhere.</p>
+                    </div>
+                </a>
+                <a class="card-link" data-category="travel" href='articles/expedia-member-exclusive/index.html'>
+                    <div class='card'>
+                        <img src='assets/travel.png' alt='Thumbnail for Expedia: Member Exclusive Deals & Flash Sales' class='card-thumb'>
+                        <h2>Expedia: Member Exclusive Deals & Flash Sales</h2>
+                        <p class='summary'>Members get special rates and access to time‑limited flash sales.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Pagination controls will be generated by script.js -->
+            <div class="pagination"></div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 SpendLess.  This site is an unofficial archive of deals originally shared by the community.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
